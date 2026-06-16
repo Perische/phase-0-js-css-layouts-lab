@@ -1,7 +1,11 @@
+const { TextEncoder, TextDecoder } = require("util");
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
-
 const htmlFilePath = path.resolve(__dirname, '../index.html');
 const cssFilePath = path.resolve(__dirname, '../style.css');
 let dom;
